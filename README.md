@@ -15,3 +15,4 @@ A machine player in physical poker games <>.
 ### Server (a laptop)
 * serves assistant interface
 * processes images from camera?
+
