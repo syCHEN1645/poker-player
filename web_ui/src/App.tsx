@@ -1,5 +1,9 @@
 import "@mantine/core/styles.css";
-import { MantineProvider, Button, Title, Stack, Container, createTheme } from '@mantine/core';
+import { MantineProvider, createTheme } from '@mantine/core';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import HomePage from "./Pages/HomePage";
+import SessionSetupPage from "./Pages/SessionSetupPage";
 
 const theme = createTheme({
   primaryColor: 'blue',
@@ -8,14 +12,13 @@ const theme = createTheme({
 export default function App() {
   return (
     <MantineProvider theme={theme} defaultColorScheme="dark">
-      <Container p="xl">
-        <Stack align="center">
-          <Title order={1}>Poker Player UI</Title>
-          <Button variant="filled" size="lg">
-            Start New Session
-          </Button>
-        </Stack>
-      </Container>
+      <BrowserRouter>
+        <Routes>
+          {/* Components and their URL paths */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/session-setup" element={<SessionSetupPage />} />
+        </Routes>
+      </BrowserRouter>
     </MantineProvider>
   );
 }
