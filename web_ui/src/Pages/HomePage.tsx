@@ -15,8 +15,8 @@ export default function HomePage() {
     <Container p="xl">
       <Modal opened={isModalOpened} onClose={closeModal}>
         <Title order={3}>Select Game</Title>
-        <Stack align="left">
-          <Button variant="outline" onClick={() => navigate('/session-setup/black-jack')}>
+        <Stack align="left" mt="md">
+          <Button variant="outline" onClick={() => navigate('/session/black-jack')}>
             Black Jack
           </Button>
         </Stack>
