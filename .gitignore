@@ -3,6 +3,25 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+bin/
+obj/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite/Workspace cache
+.vite/
+.turbo/
+
 # C extensions
 *.so
 
