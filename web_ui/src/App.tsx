@@ -2,9 +2,9 @@ import "@mantine/core/styles.css";
 import { MantineProvider, createTheme } from '@mantine/core';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import HomePage from "./pages/HomePage";
-import SessionBlackJackPage from "./pages/SessionBlackJackPage";
-import GenericSessionLayout from "./pages/GenericSessionLayout";
+import HomePage from "./Pages/HomePage";
+import SessionBlackJackPage from "./Pages/SessionBlackJackPage";
+import GenericSessionLayout from "./Pages/GenericSessionLayout";
 
 const theme = createTheme({
   primaryColor: 'blue',

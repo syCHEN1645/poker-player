@@ -1,9 +1,10 @@
 import { Grid, Paper, Text, Title, Stack, Badge, Group, Container } from '@mantine/core';
 import { IconUser, IconCoins, IconCards } from '@tabler/icons-react';
 import { useState } from 'react';
+import { usePlayerInfo } from '../context/PlayerInfo';
 
 export default function SessionBlackJackPage() {
-  
+  const { players, addPlayer, removePlayer, editPlayerName } = usePlayerInfo();
 
   return (
     <Container size="fluid" p="md">
@@ -20,7 +21,7 @@ export default function SessionBlackJackPage() {
             <Paper p="md" radius="md" withBorder>
               <Group>
                 <IconUser size={24} />
-                <Text>Player Name</Text>
+                <Text>{players[0]?.playerName || "Player Name"}</Text>
               </Group>
               <Group mt="md">
                 <IconCoins size={24} />
